@@ -11,6 +11,49 @@ Tìm tổng
 
 int main()
 {
+    //0 1 1 2 3 5 8 13
+    //n 1 2 3 4 5 6 7
+    //Fibonaci
+    int prev = 0;
+    int curr = 1;
+    int result = 1;
+
+    int n;
+    printf("Nhap n: ");
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n - 1; i++){
+        result = prev + curr;
+        prev = curr;
+        curr = result;
+    }
+    //0 1 1 2 3 5 8 13
+    //n 1 2 3 4 5 6 7
+
+    // Sau khi result = curr + prev
+    // Curr và Prev nhảy qua 1 bậc
+        // Curr sẽ lấy giá trị của result
+        // Prev sẽ lấy giá trị của curr
+    // => Để chuẩn bị cho lần tính result tiếp theo
+
+    // i = 1;
+    // result = prev + curr = 0 + 1 = 1
+    // prev = curr = 1
+    // curr = result = 1
+
+    // i = 2;
+    // result = prev + curr =  1 + 1 = 2
+    // prev =  curr = 1
+    // curr = result = 2
+
+    // i = 3;
+    // result = prev + curr =  = 1 + 2 = 3
+    // prev = curr = 2
+    // curr = result = 3
+
+    printf("%d", result);
+
+/*
     //Check Prime -> Phiên bản Flag
     int number;
     int isPrime = 1;
@@ -51,6 +94,7 @@ int main()
     } else {
         printf("Khong phai so nguyen to");
     }
+*/
 
 /*
     //Check Prime -> Phiên bản Count
