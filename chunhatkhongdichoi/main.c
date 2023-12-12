@@ -11,9 +11,18 @@ Tìm tổng
 
 int main()
 {
+    float sum = 0;
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+    for(int i = 1 ; i <= n ; i++){
+        sum = sum + (float)1/i;
+    }
+    printf("%f", sum);
     //0 1 1 2 3 5 8 13
     //n 1 2 3 4 5 6 7
     //Fibonaci
+    /*
     int prev = 0;
     int curr = 1;
     int result = 1;
@@ -27,6 +36,7 @@ int main()
         prev = curr;
         curr = result;
     }
+    */
     //0 1 1 2 3 5 8 13
     //n 1 2 3 4 5 6 7
 
@@ -51,7 +61,7 @@ int main()
     // prev = curr = 2
     // curr = result = 3
 
-    printf("%d", result);
+    //printf("%d", result);
 
 /*
     //Check Prime -> Phiên bản Flag
